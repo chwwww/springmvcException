@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+	
+	<context:annotation-config></context:annotation-config>	
+	<context:component-scan base-package="com.chw"></context:component-scan>
+	
+	<bean id="exceptionHandler" class="com.chw.core.exception.MyExceptionHandler"></bean>
+	
+	 <!-- <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		默认的异常处理页面，当该异常类型注册时使用
+		<property name="defaultErrorView" value="error"></property>
+		定义异常处理页面用来获取异常信息的变量名，默认为exception
+		<property name="exceptionAttribute" value="ex"></property>
+		定义需要特殊处理的异常类型，用类名或完全路径来做key，异常页面名也值
+		<property name="exceptionMappings">
+			<props>
+				<prop key="com.chw.core.exception.BusinessException">error-business</prop>
+				<prop key="com.chw.core.exception.ParameterException">error-parameter</prop>
+			</props>
+		</property>
+	</bean>  -->
+</beans>
