@@ -1,0 +1,2 @@
+# springmvcException本代码用来示例springmvc异常统一处理的三种方法。
+分别是(1)SimpleMappingExceptionResolver(2)HandlerExceptionResolver(3)@ExceptionHandler注解
